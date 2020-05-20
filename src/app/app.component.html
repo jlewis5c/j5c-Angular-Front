@@ -1,8 +1,97 @@
 
-<app-navbar></app-navbar>
-<div class="container ml-1" >
+  <div class="row">
+  <div class="col-md-12 ">
+      <nav class="navbar navbar-expand-sm
+      navbar-light mt-3 mx-2
+      border border-secondary
+      row justify-content-between">
 
-  <app-sidebar></app-sidebar>
+        <div class="col-2 mr-auto ">
+          <a class="nav-item inline">
+            <i class="fas fa-bars fa-2x" (click)="toggleSidebar()" ></i>
+          </a>
+          <a href="http://5thcolumn.net">
+            <!-- <span class="ml-4 h3 text-monospace">5th Column</span> -->
+          </a>
+        </div>
+
+
+        <div class="col-2">
+            <ul class="navbar-nav">
+              <li>
+
+              </li>
+                <li class="nav-item ml-auto">
+                    <a href="#" class="nav-link ">
+                      <i class="fas fa-home fa-2x"></i>
+                    </a>
+                </li>
+                <li class="nav-item ml-auto">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-barcode fa-2x"></i>
+                    </a>
+                </li>
+                <li class="nav-item ml-auto">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-cogs"></i>
+                    </a>
+                </li>
+                <li class="nav-item ml-auto">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-user-circle fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+           </div>
+      </nav>
+
+  </div >
+
+  <div class="col-2 no-gutters" >
+    <div class="row justify-content-around">
+
+      <div class="col-md-2 col-sm-4 offset-1 mt-2 text-right" id="icons-list">
+        <ul class="list-unstyled ">
+            <li class="mb-4"><a routerLink="/">
+            <i class="fas fa-user-secret"></i>
+          </a></li>
+            <li class="mb-4"><a routerLink="/posts">
+            <i class="fas fa-blog"></i>
+          </a></li>
+            <li class="mb-4"><a routerLink="/contact">
+            <i class="fas fa-address-book"></i>
+          </a></li>
+            <li class="mb-4"><a routerLink="/more">
+            <i class="fas fa-plus"></i>
+          </a></li>
+        </ul>
+      </div>
+    <div class="col col-sm-0 pl-0 sidebar-div">
+      <ng-sidebar-container class="mt-1">
+        <!-- Sidebar -->
+          <ng-sidebar [opened]="opened" class="text-left">
+                <ul class="list-unstyled font-small">
+                    <li class="mb-4"> <a routerLink="/" >Dashboard</a></li>
+                    <li class="mb-4"> <a routerLink="/posts">Posts</a></li>
+                  <li class="mb-4"><a routerLink="/contact">Contact</a></li>
+                    <li class="mb-4"><a routerLink="/more">More..</a></li>
+                </ul>
+          </ng-sidebar >
+
+        </ng-sidebar-container>
+    </div>
+    </div>
+  </div>
+  <div class="col-10 mt-1 ml-auto border border-secondary">
+    <router-outlet></router-outlet>
+   </div>
+
 
 </div>
+
+
+  <!-- <app-sidebar class="col-2 mt-2 ml-4  border border-info"></app-sidebar> -->
+    <!-- <app-main-pane class="col-10 mt-2 bg-success " ></app-main-pane> -->
+
+
 
