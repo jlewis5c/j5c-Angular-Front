@@ -1,0 +1,33 @@
+.{
+  width: 90vw;
+}
+ng-sidebar-container, #icons-list{
+  height: 100vh;
+
+}
+::ng-deep .ng-sidebar {
+  background-color: #f4f4f4;
+  /* width: 100vw; */
+  padding:  1.25em 1em;
+  box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5);
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(104, 102, 102);
+}
+#icons-list {
+  background-color: #f4f4f4;
+  padding:  1em 1em;
+  box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5);
+}
+@media only screen and (max-width:767px){
+  .sidebar-div{
+    display: none;
+  }
+  #icons-list{
+    width:100vw
+  }
+}
