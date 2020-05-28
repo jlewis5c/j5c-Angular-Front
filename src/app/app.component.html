@@ -1,28 +1,33 @@
 
   <div class="row">
   <div class="col-md-12 ">
+
+                            <!-- NAV -->
       <nav class="navbar navbar-expand-sm
       navbar-light mt-3 mx-2
       border border-secondary
       row justify-content-between">
+
+                      <!-- NAV - Left Items -->
 
         <div class="col-2 mr-auto ">
           <a class="nav-item inline">
             <i class="fas fa-bars fa-2x" (click)="toggleSidebar()" ></i>
           </a>
           <a href="http://5thcolumn.net">
-            <!-- <span class="ml-4 h3 text-monospace">5th Column</span> -->
+            <span class="ml-4 h5 text-monospace inline-block">5th Column</span>
           </a>
         </div>
 
+                    <!-- NAV - Right Items -->
 
-        <div class="col-2">
+        <div class="col-4 justify-content-right">
             <ul class="navbar-nav">
               <li>
 
               </li>
                 <li class="nav-item ml-auto">
-                    <a href="#" class="nav-link ">
+                    <a href="#" class="nav-link">
                       <i class="fas fa-home fa-2x"></i>
                     </a>
                 </li>
@@ -33,10 +38,10 @@
                 </li>
                 <li class="nav-item ml-auto">
                     <a href="#" class="nav-link">
-                      <i class="fas fa-cogs"></i>
+                      <i class="fas fa-cogs fa-2x"></i>
                     </a>
                 </li>
-                <li class="nav-item ml-auto">
+                <li class="nav-item mr-auto">
                     <a href="#" class="nav-link">
                       <i class="fas fa-user-circle fa-2x"></i>
                     </a>
@@ -45,12 +50,20 @@
            </div>
       </nav>
 
+                      <!-- End of Nav   -->
+
+<!-- START OF SIDE BAR AND MAIN PANE WHICH OCCUPY THE SECOND ROW OF THIS GRID LAYOUT -->
+
+                      <!-- SIDEBAR  -->
   </div >
 
-  <div class="col-2 no-gutters" >
-    <div class="row justify-content-around">
+  <div class="col-2 " >
 
-      <div class="col-md-2 col-sm-4 offset-1 mt-2 text-right" id="icons-list">
+    <div class="row ">
+
+      <!-- SIDEBAR Icons List  -->
+
+      <div class="col-md-2 col-sm-4 offset-1 mt-1 text-right" id="icons-list">
         <ul class="list-unstyled ">
             <li class="mb-4"><a routerLink="/">
             <i class="fas fa-user-secret"></i>
@@ -66,12 +79,16 @@
           </a></li>
         </ul>
       </div>
+
+                   <!-- SIDEBAR ngSidebar  -->
+
     <div class="col col-sm-0 pl-0 sidebar-div">
+
       <ng-sidebar-container class="mt-1">
         <!-- Sidebar -->
           <ng-sidebar [opened]="opened" class="text-left">
                 <ul class="list-unstyled font-small">
-                    <li class="mb-4"> <a routerLink="/" >Dashboard</a></li>
+                    <li class="mb-4"> <a routerLink="#" >Dashboard</a></li>
                     <li class="mb-4"> <a routerLink="/posts">Posts</a></li>
                   <li class="mb-4"><a routerLink="/contact">Contact</a></li>
                     <li class="mb-4"><a routerLink="/more">More..</a></li>
@@ -82,10 +99,15 @@
     </div>
     </div>
   </div>
-  <div class="col-10 mt-1 ml-auto border border-secondary">
+
+                    <!-- End of Sidebar  -->
+
+                    <!-- MAIN PANE -->
+
+  <div class="col-10 p-0 mt-1 border border-secondary">
     <router-outlet></router-outlet>
    </div>
-
+              <!-- End of Main Pane -->
 
 </div>
 
