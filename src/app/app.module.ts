@@ -1,8 +1,9 @@
+import { AppComponent } from './../../../app2/src/app/app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { APP_BASE_HREF} from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainPaneComponent } from './main-pane/main-pane.component';
 import { SidebarModule } from 'ng-sidebar';
@@ -18,7 +19,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     PostsComponent,
     ContactComponent,
     MoreComponent,
-    DashboardComponent
+    DashboardComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,11 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     SidebarModule.forRoot()
   ],
   providers: [],
+  //Deleted wth Ryan
+  // providers: [{provide: APP_BASE_HREF, useValue: '/'}]
+  //
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
