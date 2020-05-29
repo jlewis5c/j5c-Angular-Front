@@ -8,28 +8,10 @@ import { Routes, RouterModule } from '@angular/router';
 import {APP_BASE_HREF } from '@angular/common';
 import { from } from 'rxjs';
 
-
-
-const routes: Routes = [{
-  path: "",
-  component: DashboardComponent
-},
-{
-  path:"posts",
-  component:PostsComponent
-
-},
-{
-  path:"contact",
-  component: ContactComponent
-},
-{
-  path:"more",
-  component: MoreComponent
-},
+const routes: Routes = [
 {
   path: "**", component: EmptyRouteComponent
-},
+}
 
 ];
 

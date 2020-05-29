@@ -29,9 +29,6 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     SidebarModule.forRoot()
   ],
   providers: [],
-  //Deleted wth Ryan
-  // providers: [{provide: APP_BASE_HREF, useValue: '/'}]
-  //
   bootstrap: [AppComponent]
 })
 export class AppModule { }
