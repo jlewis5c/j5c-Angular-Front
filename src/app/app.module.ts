@@ -1,4 +1,4 @@
-import { AppComponent } from './../../../app2/src/app/app.component';
+import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF} from '@angular/common';
@@ -29,9 +29,6 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     SidebarModule.forRoot()
   ],
   providers: [],
-  //Deleted wth Ryan
-  // providers: [{provide: APP_BASE_HREF, useValue: '/'}]
-  //
   bootstrap: [AppComponent]
 })
 export class AppModule { }
