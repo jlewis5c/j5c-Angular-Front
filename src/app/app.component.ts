@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { assetUrl } from 'src/single-spa/asset-url'
 
 @Component({
-  selector: 'app-root',
+  selector: 'nav-side-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'j5c-angular-front';
+  title = 'Nav & Sidebar';
+
   opened = true
 
   toggleSidebar(){
@@ -14,22 +16,7 @@ export class AppComponent {
     console.log(this.opened)
   }
 
-
 }
 
-
-
-// const lifecycles = singleSpaAngular({
-//   bootstrapFunction: singleSpaProps => {
-//     return platformBrowserDynamic(getSingleSpaExtraProviders()).bootstrapModule(AppModule);
-//   },
-//   template: '<app-root />',
-//   Router,
-//   NgZone,
-// });
-
-// export const bootstrap = this.lifecycles.bootstrap;
-// export const mount = this.lifecycles.mount;
-// export const unmount = this.lifecycles.unmount;
 
 
