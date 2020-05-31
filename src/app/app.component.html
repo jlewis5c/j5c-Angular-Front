@@ -71,12 +71,14 @@
             <li class="mb-4"><a routerLink="/posts">
             <i class="fas fa-blog"></i>
           </a></li>
-            <li class="mb-4"><a routerLink="/contact">
-            <i class="fas fa-address-book"></i>
-          </a></li>
+            <!-- <li class="mb-4"><a routerLink="/contact">
+              <i class="fas fa-address-book"></i>
+              </a>
+           </li>
             <li class="mb-4"><a routerLink="/more">
-            <i class="fas fa-plus"></i>
-          </a></li>
+              <i class="fas fa-plus"></i>
+              </a>
+            </li> -->
         </ul>
       </div>
 
@@ -88,10 +90,10 @@
         <!-- Sidebar -->
           <ng-sidebar [opened]="opened" class="text-left">
                 <ul class="list-unstyled font-small">
-                    <li class="mb-4"> <a routerLink="/app2" >Dashboard</a></li>
-                    <li class="mb-4"> <a routerLink="/app3">Posts</a></li>
-                  <li class="mb-4"><a routerLink="/app2">Contact</a></li>
-                    <li class="mb-4"><a routerLink="/app3">More..</a></li>
+                    <li class="mb-4"> <a routerLink="app2" >APP 2</a></li>
+                    <li class="mb-4"> <a routerLink="app3">APP 3</a></li>
+                  <!-- <li class="mb-4"><a routerLink="app2">Contact</a></li>
+                    <li class="mb-4"><a routerLink="app3">More..</a></li> -->
                 </ul>
           </ng-sidebar >
 
@@ -104,7 +106,7 @@
 
                     <!-- MAIN PANE -->
 
-  <div class="col-10 p-0 mt-1 border border-secondary">
+  <div class="col p-0 mt-1 ml-5">
     <router-outlet></router-outlet>
    </div>
               <!-- End of Main Pane -->
@@ -112,8 +114,7 @@
 </div>
 
 
-  <!-- <app-sidebar class="col-2 mt-2 ml-4  border border-info"></app-sidebar> -->
-    <!-- <app-main-pane class="col-10 mt-2 bg-success " ></app-main-pane> -->
+    <app-main-pane class="col-10 mt-2 bg-success " ></app-main-pane>
 
 
 
